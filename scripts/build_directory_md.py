@@ -14,7 +14,7 @@ def good_file_paths(top_dir: str = ".") -> Iterator[str]:
         for filename in filenames:
             if filename == "__init__.py":
                 continue
-            if os.path.splitext(filename)[1] in (".py", ".ipynb"):
+            if os.path.splitext(filename)[1] in (".py", ".ipynb", ".md"):
                 yield os.path.join(dir_path, filename).lstrip("./")
 
 
